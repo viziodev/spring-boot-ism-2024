@@ -1,9 +1,15 @@
 package org.example.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class Article {
-    private Long id;
+@Entity
+@Getter
+@Setter
+@Table(name = "articles")
+public class Article  extends  AbstractEntity{
     private String articleName;
 }

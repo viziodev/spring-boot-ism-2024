@@ -1,12 +1,15 @@
 package org.example.entities;
 
-import lombok.Data;
-
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
-@Data
-public class Commande {
-    private Long id;
+@Entity
+@Getter
+@Setter
+@Table(name = "commandes")
+public class Commande  extends AbstractEntity{
     private LocalDateTime dateCmde;
     private Double totalCmde;
 }
